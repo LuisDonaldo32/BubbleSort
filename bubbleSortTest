@@ -1,0 +1,32 @@
+import unittest
+
+from bubblesort import bubbleSort
+
+class TestBubbleSort(unittest.TestCase):
+
+    def testBubbleSort_Empty(self):
+        arr = []
+        self._test_sort_all_funcs(arr)
+
+    def testBubbleSort_oneElement(self):
+        arr = [0]
+        self._test_sort_all_funcs(arr)
+
+    def testBubbleSort_sameNumbers(self):
+        arr = [1, 1, 1, 1]
+        self._test_sort_all_funcs(arr)
+
+    def testBubbleSort_alreadySorted(self):
+        arr = [1, 2, 3, 4]
+        self._test_sort_all_funcs(arr)
+
+    def testBubbleSort_Reversed(self):
+        arr = [4, 3, 2, 1]
+        self._test_sort_all_funcs(arr)
+
+    def testBubbleSort_disorderWithRepetitions(self):
+        arr = [3, 4, 3, 2, 4, 2, 1, 1]
+        self._test_sort_all_funcs(arr)
+
+if __name__ == '__main__':
+    unittest.main()
